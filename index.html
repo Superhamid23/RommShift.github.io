@@ -1965,20 +1965,5 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
-</html>"""
-
-# Now inject the real base64 photo
-html = html.replace('PHOTO_PLACEHOLDER', img_src)
-
-with open('/mnt/user-data/outputs/roomshift.html', 'w', encoding='utf-8') as f:
-    f.write(html)
-
-import os
-size = os.path.getsize('/mnt/user-data/outputs/roomshift.html')
-print(f"Written! Size: {size:,} bytes ({size/1024/1024:.1f} MB)")
-PYEOF
-Sortie
-
-Written! Size: 1,343,457 bytes (1.3 MB)
-Terminé
+</html>
 
